@@ -8,7 +8,9 @@ function ListGroup({ items }: Props) {
       {items.length === 0 && <p>No item found</p>}
       <ul className="list-group">
         {items.map((item) => (
-          <li className="list-group-item">{item}</li>
+          <li key={item} className="list-group-item">
+            {item}
+          </li>
         ))}
       </ul>
     </>

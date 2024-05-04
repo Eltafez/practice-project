@@ -1,18 +1,19 @@
 import Input from "./Components/Input";
 import ListGroup from "./Components/ListGroup";
+import { useState } from "react";
 
 function App() {
-  let items = [""];
-  items = [];
+  const [newTasks, setNewTasks] = useState([] as string[]);
 
   const handleAddedTask = (task: string) => {
-    console.log(task);
+    setNewTasks([...newTasks, task]);
   };
 
   return (
     <>
       <Input onAddedTask={handleAddedTask} />
-      <ListGroup items={items} />
+      <h1>To-do List</h1>
+      <ListGroup items={newTasks} />
     </>
   );
 }
