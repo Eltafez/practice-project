@@ -1,15 +1,11 @@
-function ListGroup() {
-  let items = [
-    "Belgium",
-    "Germany",
-    "France",
-    "Japan",
-    "Tokyo",
-    "The Philippines",
-  ];
+interface Props {
+  items: string[];
+}
 
+function ListGroup({ items }: Props) {
   return (
     <>
+      {items.length === 0 && <p>No item found</p>}
       <ul className="list-group">
         {items.map((item) => (
           <li className="list-group-item">{item}</li>

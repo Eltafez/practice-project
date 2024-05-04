@@ -1,13 +1,18 @@
 import Input from "./Components/Input";
 import ListGroup from "./Components/ListGroup";
-import Button from "./Components/Button";
 
 function App() {
+  let items = [""];
+  items = [];
+
+  const handleAddedTask = (task: string) => {
+    console.log(task);
+  };
+
   return (
     <>
-      <Input />
-      <Button></Button>
-      <ListGroup />
+      <Input onAddedTask={handleAddedTask} />
+      <ListGroup items={items} />
     </>
   );
 }
