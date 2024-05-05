@@ -1,1 +1,3 @@
-# Practice React + Vite + TypeScript
+# To-do List
+
+## Practice React + TypeScript + Vite
